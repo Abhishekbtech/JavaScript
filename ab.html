@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <label> Sort by Release Year:
+        <select id="sort">
+
+            <option value="asc">Ascending</option>
+
+            <option value="desc">Descending</option>
+
+        </select>
+
+    </label>
+
+    <div id="movies"></div>
+    <style>
+        .movie {
+            display: flex;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .movie img {
+            margin-right: 10px;
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <label> Sort by Release Year:
+        <select id="sort">
+
+            <option value="asc">Ascending</option>
+
+            <option value="desc">Descending</option>
+
+        </select>
+
+    </label>
+
+    <div id="movies"></div>
+
+    <script>
+        const API_KEY = "f1a87d30ad8792e0dd1c12ce07d37337";
+        const API_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
+
+        // Function to fetch movies from the API
+        async function fetchMovies() {
+            const response = await fetch(API_URL);
+            const data = await response.json();
+            return data.results;
+        }
+
+        // Function to create and append movie cards
+        function createMovieCard(movie) {
+            const moviesContainer = document.getElementById('movies');
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('movie');
+
+            const posterPath = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+
+            movieDiv.innerHTML = `
+                <img class="poster" src="${posterPath}" alt="${movie.title}">
+                <div>
+                    <h2 class="movie-title">${movie.title}</h2>
+                    <p class="release-year">${new Date(movie.release_date).getFullYear()}</p>
+                    <p class="movie-overview">${movie.overview}</p>
+                </div>
+            `;
+
+            moviesContainer.appendChild(movieDiv);
+        }
+
+        // Function to sort movies by release year
+        function sortMovies(movies, sortOrder) {
+            return movies.sort((a, b) => {
+                const yearA = new Date(a.release_date).getFullYear();
+                const yearB = new Date(b.release_date).getFullYear();
+
+                return sortOrder === 'asc' ? yearA - yearB : yearB - yearA;
+            });
+        }
+
+        // Function to render movies
+        async function renderMovies() {
+            const movies = await fetchMovies();
+            const sortSelect = document.getElementById('sort');
+
+            // Initial rendering in ascending order
+            const sortedMovies = sortMovies(movies, 'asc');
+            sortedMovies.forEach(movie => createMovieCard(movie));
+
+            // Event listener for sorting change
+            sortSelect.addEventListener('change', () => {
+                const sortOrder = sortSelect.value;
+                const sortedMovies = sortMovies(movies, sortOrder);
+
+                // Clear existing movie cards
+                document.getElementById('movies').innerHTML = '';
+
+                // Render sorted movie cards
+                sortedMovies.forEach(movie => createMovieCard(movie));
+            });
+        }
+
+        // Initial call to render movies
+        renderMovies();
+    </script>
+</body>
+
+</html>

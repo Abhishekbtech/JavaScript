@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO Research Centers Finder</title>
+    <link rel="stylesheet" href="./cs.css">
+</head>
+
+<body>
+    <header>
+        <h1>Indian Space Research Organisation</h1>
+        <h1>Search for ISRO Centers based on place, state and name</h1>
+    </header>
+    <main>
+        <h1></h1>
+        <div class="firstClass">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchCentres()">Search</button>
+            </div>
+            <div class="category-buttons">
+                <button onclick="filterByCategory('all')">All</button>
+                <button onclick="filterByCategory('city')">City</button>
+                <button onclick="filterByCategory('state')">State</button>
+                <button onclick="filterByCategory('centre')">Centre</button>
+            </div>
+        </div>
+        <div id="centresContainer" class="centres-container">
+            <!-- Centers will be dynamically added here -->
+        </div>
+    </main>
+    <script src="./ss.js"></script>
+</body>
+
+</html>
