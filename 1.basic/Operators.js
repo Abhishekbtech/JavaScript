@@ -1,6 +1,7 @@
 //6 type of operators
 
-//1 Arithmetic
+//1. Arithmetic
+console.log("1. Arithmetic")
 let a = 10, b = 5;
 console.log(a + b);   // addition
 console.log(a - b);   // subtration
@@ -15,6 +16,7 @@ console.log(--a);   // per decrement
 
 
 //2 Comparison
+console.log("2. Comparison")
 let c = 10, d = 20;
 if (c == d) { console.log("Equal"); }   	// Equal to
 else if (c != d) { console.log("Not equal"); } // Not equal\
@@ -29,6 +31,7 @@ console.log(c !== d);   // Strict Not equal
 
 
 // 3. Assignment
+console.log("3. Assignment")
 let e = 10;         //Assignment
 e += 5;             //Add and assign    
 e -= 3;             //Subtract and assign

@@ -37,14 +37,14 @@ do {
 } while (x < 5)
 
 
-// 4. for-in loop
+// 4. for-in loop   use for Object
 const obj = { a: 1, b: 2, c: 3 };
 for (let key in obj) {
     console.log(`${key} : ${obj[key]}`);
 }
 
 
-// 5. for-of loop
+// 5. for-of loop   use for Array
 const arr = [1, 2, 3];
 for (let value of arr) {
     console.log(value);
