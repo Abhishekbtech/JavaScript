@@ -5,7 +5,7 @@
 //     console.log(number1 + number2);
 //     return number1 + number2;
 // }
-// // console.log("Function Declaration ", calcAddition(6, 9));
+// //console.log("Function Declaration ", calcAddition(6, 9));
 // calcAddition(6, 9)
 
 
@@ -146,11 +146,11 @@
     })();
 */
 
-(function () {
-    console.log("Hello, world!");
-})();
+// (function () {
+//     console.log("Hello, world!");
+// })();
 
 
-((x, y) => {
-    console.log(x + y);
-})(10, 20);
+// ((x, y) => {
+//     console.log(x + y);
+// })(10, 20);
