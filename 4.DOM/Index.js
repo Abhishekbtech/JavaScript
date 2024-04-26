@@ -1,9 +1,6 @@
 // The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web.
 
-// DOM Manipulation     (SELECTORS (get the element) 
-
-// write(“string”): Writes the given string on the document.
-// getElementsByName(): returns all the elements having the given name value.
+//(SELECTORS (get the element) 
 
 // Selecting with id
 let myHeading = document.getElementById("myHeading");
@@ -27,67 +24,13 @@ console.log("Query Selector All ", allPs);
 
 
 /*
-
-    There are 6 main methods to search for nodes in DOM:
-
-    Method	                    Searches by...	    Can call on an element?	            Live?
-    querySelector	            CSS-selector	        ✔	                            -
-    querySelectorAll	        CSS-selector	        ✔	                           -
-    getElementById	            id	                    	                            -
-    getElementsByName	        name	                -	                            ✔
-    getElementsByTagName	    tag or '*'	            ✔	                            ✔
-    getElementsByClassName  	class	                ✔	                            ✔
-    
-    By far the most used are querySelector and querySelectorAll, but getElement(s)By* can be sporadically helpful or found 
-    in the old scripts.
-
-    Besides that:
+    document.getElementsByName(name) returns elements with the given name attribute, document-wide. Very rarely used.
 
     There is elem.matches(css) to check if elem matches the given CSS selector.
-    There is elem.closest(css) to look for the nearest ancestor that matches the given CSS-selector. The elem itself 
-    is also checked.
-    And let’s mention one more method here to check for the child-parent relationship, as it’s sometimes useful:
+
+    There is elem.closest(css) to look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked. And let’s mention one more method here to check for the child-parent relationship, as it’s sometimes useful:
 
     elemA.contains(elemB) returns true if elemB is inside elemA (a descendant of elemA) or when elemA==elemB.
-
-*/
-
-
-/*
-
-    Each DOM node belongs to a certain class. The classes form a hierarchy. The full set of properties and methods come as 
-    the result of inheritance.
-
-    Main DOM node properties are:
-
-    nodeType
-    We can use it to see if a node is a text or an element node. It has a numeric value: 1 for elements,3 for text nodes, 
-    and a few others for other node types. Read-only.
-
-    nodeName/tagName
-    For elements, tag name (uppercased unless XML-mode). For non-element nodes nodeName describes what it is. Read-only.
-
-    innerHTML
-    The HTML content of the element. Can be modified.
-
-    outerHTML
-    The full HTML of the element. A write operation into elem.outerHTML does not touch elem itself. Instead it gets 
-    replaced with the new HTML in the outer context.
-
-    nodeValue/data
-    The content of a non-element node (text, comment). These two are almost the same, usually we use data. Can be modified.
-
-    textContent
-    The text inside the element: HTML minus all <tags>. Writing into it puts the text inside the element, with all special 
-    characters and tags treated exactly as text. Can safely insert user-generated text and protect from unwanted HTML 
-    insertions.
-
-    hidden
-    When set to true, does the same as CSS display:none.
-
-    DOM nodes also have other properties depending on their class. For instance, <input> elements (HTMLInputElement) 
-    support value, type, while <a> elements (HTMLAnchorElement) support href etc. Most standard HTML attributes have 
-    a corresponding DOM property.
 
 */
 
@@ -95,7 +38,6 @@ console.log("Query Selector All ", allPs);
 // Properties
 
 /*
-
     Attributes – is what’s written in HTML.
     Properties – is what’s in DOM objects.
 
