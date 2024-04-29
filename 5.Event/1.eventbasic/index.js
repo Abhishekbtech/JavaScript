@@ -1,5 +1,4 @@
-// Event :- An event is a signal that something has happened. All DOM nodes generate such signals (but events are not 
-// limited to DOM).
+// Event :- An event is a signal that something has happened. All DOM nodes generate such signals (but events are not limited to DOM).
 
 /*
     Mouse events:

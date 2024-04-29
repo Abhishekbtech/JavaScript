@@ -1,21 +1,21 @@
 // Bubbling :-  When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way
 // up on other ancestors.
 
-// const grandParentElement = document.getElementById("grandParent");
-// const parentElement = document.getElementById("parent");
-// const childElement = document.getElementById("child");
+const grandParentElement = document.getElementById("grandParent");
+const parentElement = document.getElementById("parent");
+const childElement = document.getElementById("child");
 
-// childElement.addEventListener("click", (eventObj) => {
-//     console.log("child CLicked");
-// }, false);
+childElement.addEventListener("click", (eventObj) => {
+    console.log("child CLicked");
+}, false);
 
-// grandParentElement.addEventListener("click", () => {
-//     console.log("grandparent hello");
-// }, false);
+grandParentElement.addEventListener("click", () => {
+    console.log("grandparent hello");
+}, false);
 
-// parentElement.addEventListener("click", (eventObj) => {
-//     console.log("parent clicked !!!");
-// }, false);
+parentElement.addEventListener("click", (eventObj) => {
+    console.log("parent clicked !!!");
+}, true);
 
 
 
