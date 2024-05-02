@@ -13,13 +13,14 @@
 //     console.log('I am a producer');
 //     resolve("sus");
 // })
+// console.log(promise)
 
 
 // let promise1 = new Promise((res, rej) => {
 //     console.log('I am a producer');
 //     rej("some error");
 // })
-
+// console.log(promise1)
 
 // function promise2(dataid, getNextdata) {
 //     return new Promise((res, rej) => {
