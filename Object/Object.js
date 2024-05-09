@@ -7,7 +7,7 @@
 //     age: 23,
 // }
 
-// // get
+// get
 // console.log(abhi);
 // console.log(abhi.name);
 // console.log(abhi["age"]);
@@ -23,7 +23,7 @@
 
 
 
-// // Computed properties :-   We can use square brackets in an object literal, when creating an object. That’s called computed properties.
+// Computed properties :-   We can use square brackets in an object literal, when creating an object. That’s called computed properties.
 
 // let fruit = prompt("Which fruit to buy?", "apple");
 // let bag = {
@@ -77,9 +77,11 @@ in other words “a reference” to it.
 // }
 
 // // now clone is a fully independent object with the same content
+// console.log(user)
+// console.log(clone)
 // clone.name = "Pete"; // changed the data in it
-// console.log(clone.name);
-// console.log(user.name); // still John in the original object
+// console.log("clone", clone);
+// console.log("user", user); // still John in the original object
 
 
 
