@@ -30,8 +30,8 @@ let obj = {
     Property descriptor object to apply.
 */
 
-const descriptorOfName = Object.getOwnPropertyDescriptor(obj, "name");
-console.log(descriptorOfName, "orginal property descriptoe");
+// const descriptorOfName = Object.getOwnPropertyDescriptor(obj, "name");
+// console.log(descriptorOfName, "orginal property descriptoe");
 
 
 // 1. writable
@@ -75,31 +75,31 @@ console.log(descriptorOfName, "orginal property descriptoe");
 
 
 // 4. Object.freeze(obj) :-     Forbids adding/removing/changing of properties. Sets configurable: false, writable: false for all existing properties.
-Object.freeze(obj);
-console.log(Object.getOwnPropertyDescriptor(obj, "name"));
+// Object.freeze(obj);
+// console.log(Object.getOwnPropertyDescriptor(obj, "name"));
 
 
 // 5. Object.isFrozen(obj) :-   Returns true if adding/removing/changing properties is forbidden, and all current properties are configurable: false, writable: false.
-console.log(Object.isFrozen(obj));
+// console.log(Object.isFrozen(obj));
 
 
 // 6. Object.isSealed(obj) :-   Returns true if adding/removing properties is forbidden, and all existing properties have configurable: false.
-console.log(Object.isSealed(obj));
+// console.log(Object.isSealed(obj));
 
 
 // 7. Object.freeze(obj) :- Forbids adding/removing/changing of properties. Sets configurable: false, writable: false for all existing properties.
-Object.freeze(obj)
-console.log(Object.getOwnPropertyDescriptor(obj, "name"));
+// Object.freeze(obj)
+// console.log(Object.getOwnPropertyDescriptor(obj, "name"));
 
 
 // 8. Object.preventExtensions(obj) :-  Forbids the addition of new properties to the object.
-const object1 = {};
-Object.preventExtensions(object1);
-try {
-    Object.defineProperty(object1, 'property1', {
-        value: 42,
-    });
-} catch (e) {
-    console.log(e);
-    // Expected output: TypeError: Cannot define property property1, object is not extensible
-}
+// const object1 = {};
+// Object.preventExtensions(object1);
+// try {
+//     Object.defineProperty(object1, 'property1', {
+//         value: 42,
+//     });
+// } catch (e) {
+//     console.log(e);
+//     // Expected output: TypeError: Cannot define property property1, object is not extensible
+// }
