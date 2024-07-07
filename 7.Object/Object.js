@@ -95,7 +95,7 @@ in other words “a reference” to it.
 //     }
 // };
 
-// console.log(user.sizes.height); // 182
+// console.log(users.sizes.height); // 182
 
 // Object.assign for the so-called “shallow copy” (nested objects are copied by reference)
 
@@ -107,8 +107,12 @@ in other words “a reference” to it.
 //     }
 // };
 // let clone = Object.assign({}, user1);
+// let new1 = user1;
+// console.log("new1", new1)
 // console.log(user1.sizes === clone.sizes); // true, same object
 // // user and clone share sizes
+
+// console.log("clone",clone)
 // user1.sizes.width = 60;    // change a property from one place
 // console.log(clone.sizes.width); // 60, get the result from the other one
 
