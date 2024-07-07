@@ -1,8 +1,8 @@
-let obj = {
-    name: "Abhishek Chauhan",
-    class: 10,
-    age: 20
-}
+// let obj = {
+//     name: "Abhishek Chauhan",
+//     class: 10,
+//     age: 20
+// }
 
 // Property flags and descriptors
 
