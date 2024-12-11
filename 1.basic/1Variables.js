@@ -1,4 +1,6 @@
-// 4 type of variables
+//  A variable is a “named storage” for data. We can use variables to store goodies, visitors, and other data.
+
+// 4 type of variables declarations. 
 /*
     let – is a modern variable declaration.
     var – is an old-school variable declaration. Normally we don’t use it at all, but we’ll cover subtle differences from let in the chapter The old "var", just in case you need them.
