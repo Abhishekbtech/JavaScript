@@ -1,4 +1,4 @@
-//6 type of operators
+//7 type of operators
 
 //1. Arithmetic
 console.log("1. Arithmetic")
@@ -64,3 +64,12 @@ console.log(13 >>> 2);        //Zero fill right shift
 console.log("6. Ternary")
 let j = 15;
 j > 10 ? console.log('Yes') : console.log('No');
+
+// 7. Comma
+
+// The comma operator , is one of the rarest and most unusual operators. Sometimes, it’s used to write shorter code, so we need to know it in order to understand what’s going on.
+
+// The comma operator allows us to evaluate several expressions, dividing them with a comma ,. Each of them is evaluated but only the result of the last one is returned.
+
+let n = (1 + 2, 3 + 4);
+console.log(n)
