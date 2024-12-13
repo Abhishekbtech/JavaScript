@@ -23,6 +23,31 @@
 // console.log("Arrow Function ",add(5, 7));
 
 
+// Local variables
+// A variable declared inside a function is only visible inside that function.
+
+// function showMessage() {
+//     let message = "Hello, I'm JavaScript!"; // local variable
+//     console.log(message);
+// }
+// showMessage(); // Hello, I'm JavaScript!
+// console.log(message);
+
+
+// Outer variables
+// A function can access an outer variable as well
+
+// let userName = 'John';
+// function showMessage() {
+//   userName = "Bob"; // (1) changed the outer variable
+//   let message = 'Hello, ' + userName;
+//   console.log(message);
+// }
+// console.log( userName ); // John before the function call
+// showMessage();
+// console.log( userName ); // Bob, the value was modified by the function
+
+
 // Function with varibales
 // let c = 10;
 // function funcWithVar(a, b) {
