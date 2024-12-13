@@ -41,3 +41,23 @@ switch (0 <= marks || marks <= 100) {
 }
 
 console.log(`Student Branch name is : ${Branch}`);
+
+
+// 3 Multiple ‘?’ 
+
+let age = prompt('age?', 18);
+
+let message = (age < 3) ? 'Hi, baby!' :
+  (age < 18) ? 'Hello!' :
+  (age < 100) ? 'Greetings!' :
+  'What an unusual age!';
+
+alert( message );
+
+
+// 4 Non-traditional use of ‘?’ 
+
+let company = prompt('Which company created JavaScript?', '');
+
+(company == 'Netscape') ?
+   alert('Right!') : alert('Wrong.');
