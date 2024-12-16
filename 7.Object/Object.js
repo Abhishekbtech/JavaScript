@@ -1,6 +1,9 @@
 // Object :-    objects are used to store keyed collections of various data and more complex entities.
 // In JavaScript, an object can be created using a literal notation or by constructor function.
 
+// let user1 = new Object(); // "object constructor" syntax
+// let user2 = {};  // "object literal" syntax
+
 // Literals and properties
 // const abhi = {
 //     name: "Abhishek",
@@ -21,8 +24,6 @@
 // delete abhi.age;
 // console.log(abhi["age"]);
 
-
-
 // Computed properties :-   We can use square brackets in an object literal, when creating an object. That’s called computed properties.
 
 // let fruit = prompt("Which fruit to buy?", "apple");
@@ -30,6 +31,51 @@
 //     [fruit]: 5, // the name of the property is taken from the variable fruit
 // };
 // alert(bag.apple);
+
+// Property existence test, “in” operator
+
+// A notable feature of objects in JavaScript, compared to many other languages, is that it’s possible to access any property. There will be no error if the property doesn’t exist!
+// Reading a non-existing property just returns undefined. So we can easily test whether the property exists
+
+// let user = { name: "John", age: 30 };
+
+// alert( "age" in user ); // true, user.age exists
+// alert( "blabla" in user ); // false, user.blabla doesn't exist
+
+// The "for..in" loop
+
+// let user = {
+//   name: "John",
+//   age: 30,
+//   isAdmin: true,
+// };
+
+// for (let key in user) {
+//   // keys
+//   alert(key); // name, age, isAdmin
+//   // values for the keys
+//   alert(user[key]); // John, 30, true
+// }
+
+
+// Ordered like an object
+
+// Are objects ordered? In other words, if we loop over an object, do we get all properties in the same order they were added? Can we rely on this?
+// The short answer is: “ordered in a special fashion”: integer properties are sorted, others appear in creation order. The details follow.
+
+
+// let codes = {
+//     "49": "Germany",
+//     "41": "Switzerland",
+//     "44": "Great Britain",
+//     // ..,
+//     "1": "USA"
+//   };
+  
+//   for (let code in codes) {
+//     alert(code); // 1, 41, 44, 49
+//   }
+
 
 
 
@@ -42,12 +88,10 @@ A variable assigned to an object stores not the object itself, but its “addres
 in other words “a reference” to it.
 */
 
-
 // let message = "Hello!";
 // let phrase = message;    //both have same value but both store in diffrent addresh
 // delete message;
 // console.log(phrase);
-
 
 // Comparison by reference :-   Two objects are equal only if they are the same object.
 
@@ -60,8 +104,6 @@ in other words “a reference” to it.
 // let c = { 1: 0 };
 // let d = { 1: 0 }; // two independent objects
 // console.log(c == d); // false
-
-
 
 // Cloning and merging, Object.assign  :-   copying an object variable creates one more reference to the same object.
 
@@ -82,8 +124,6 @@ in other words “a reference” to it.
 // clone.name = "Pete"; // changed the data in it
 // console.log("clone", clone);
 // console.log("user", user); // still John in the original object
-
-
 
 // // Nested cloning   :-  Until now we assumed that all properties of user are primitive. But properties can be references to other objects.
 
@@ -116,8 +156,6 @@ in other words “a reference” to it.
 // user1.sizes.width = 60;    // change a property from one place
 // console.log(clone.sizes.width); // 60, get the result from the other one
 
-
-
 // structuredClone :-   The call structuredClone(object) clones the object with all nested properties.
 // “deep cloning” function structuredClone or use a custom cloning implementation,
 
@@ -134,8 +172,6 @@ in other words “a reference” to it.
 // // user and clone are totally unrelated now
 // user.sizes.width = 60;    // change a property from one place
 // console.log(clone.sizes.width); // 50, not related
-
-
 
 // Garbage collection :-    when an object is no longer referenced by any code in your program, it becomes eligible
 
@@ -183,7 +219,6 @@ in other words “a reference” to it.
 // // console.log(object_3)
 // console.log(object_4)
 // console.log(object_5)
-
 
 // Object.keys, values, entries
 /*
