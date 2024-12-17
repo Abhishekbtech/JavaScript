@@ -80,6 +80,7 @@
 
 
 // -----------------------------    Object references and copying
+
 /*
 One of the fundamental differences of objects versus primitives is that objects are stored and copied “by reference”,
 whereas primitive values: strings, numbers, booleans, etc – are always copied “as a whole value”.
@@ -92,6 +93,13 @@ in other words “a reference” to it.
 // let phrase = message;    //both have same value but both store in diffrent addresh
 // delete message;
 // console.log(phrase);
+
+
+// let user = { name: 'John' };
+// let admin = user;
+// admin.name = 'Pete'; // changed by the "admin" reference
+// alert(user.name); // 'Pete', changes are seen from the "user" reference
+
 
 // Comparison by reference :-   Two objects are equal only if they are the same object.
 
@@ -124,6 +132,7 @@ in other words “a reference” to it.
 // clone.name = "Pete"; // changed the data in it
 // console.log("clone", clone);
 // console.log("user", user); // still John in the original object
+
 
 // // Nested cloning   :-  Until now we assumed that all properties of user are primitive. But properties can be references to other objects.
 
@@ -173,6 +182,10 @@ in other words “a reference” to it.
 // user.sizes.width = 60;    // change a property from one place
 // console.log(clone.sizes.width); // 50, not related
 
+
+
+
+
 // Garbage collection :-    when an object is no longer referenced by any code in your program, it becomes eligible
 
 // Declare an object
@@ -219,24 +232,3 @@ in other words “a reference” to it.
 // // console.log(object_3)
 // console.log(object_4)
 // console.log(object_5)
-
-// Object.keys, values, entries
-/*
-    For plain objects, the following methods are available:
-
-    Object.keys(obj) – returns an array of keys.
-    Object.values(obj) – returns an array of values.
-    Object.entries(obj) – returns an array of [key, value] pairs.
-*/
-
-// let user = {
-//     name: "John",
-//     age: 30
-// };
-// Object.keys(user) = ["name", "age"]
-// Object.values(user) = ["John", 30]
-// Object.entries(user) = [["name", "John"], ["age", 30]]
-
-// for (let value of Object.values(user)) {
-//     console.log(value); // John, then 30
-// }

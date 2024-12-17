@@ -1,13 +1,13 @@
 
 // 1. Object.assign :-  static method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
 
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
-const returnedTarget = Object.assign(target, source);
-console.log(returnedTarget);
-returnedTarget.c = 10;
-console.log(returnedTarget);
-console.log(source)
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const returnedTarget = Object.assign(target, source);
+// console.log(returnedTarget);
+// returnedTarget.c = 10;
+// console.log(returnedTarget);
+// console.log(source)
 
 // 2. Object.create() :-     It creates an object with the specified prototype object and properties.
 
