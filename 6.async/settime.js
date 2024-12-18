@@ -47,14 +47,14 @@
 
 // both code doing same think 
 
-let a = 1;
-setInterval(function () {
-    func(a++);
-}, 100);
+// let a = 1;
+// setInterval(function () {
+//     func(a++);
+// }, 100);
 
 
-let i = 1;
-setTimeout(function run() {
-    func(i++);
-    setTimeout(run, 100);
-}, 100);
+// let i = 1;
+// setTimeout(function run() {
+//     func(i++);
+//     setTimeout(run, 100);
+// }, 100);
