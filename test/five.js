@@ -1,1 +1,0 @@
-// Develop a search filter that dynamically filters a list of items based on user input.
